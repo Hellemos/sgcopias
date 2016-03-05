@@ -1,0 +1,79 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<head>
+	<title><ui:insert name="title">SGCópias</ui:insert></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="shortcut icon" href="images/favicon.gif" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<!-- <script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+	<script type="text/javascript">
+		var flashvars = {};
+		flashvars.xml = "config.xml";
+		flashvars.font = "font.swf";
+		var attributes = {};
+		attributes.wmode = "transparent";
+		attributes.id = "slider";
+		swfobject.embedSWF("cu3er.swf", "cu3er-container", "960", "270", "9",
+				"expressInstall.swf", flashvars, attributes);
+	</script> -->
+</head>
+
+<body>
+	<!--Header Begin-->
+	<div id="header">
+		<ui:insert name="header">
+			<div class="center">
+				<div id="logo">
+					<a href="#">SGCópias</a>
+				</div>
+				<!--Menu Begin-->
+				<div id="menu">
+					<ul>
+						<li><a class="active" href="index.xhtml"><span>Início</span></a></li>
+						<li><a href="sobre.xhtml"><span>Sobre</span></a></li>
+						<li><a href="#"><span>Serviços</span></a></li>
+						<li><a href="#"><span>Contato</span></a></li>
+					</ul>
+				</div>
+				<!--Menu END-->
+			</div>
+		</ui:insert>
+	</div>
+	<!--Header END-->
+
+
+
+
+	<!--Toprow Begin-->
+	<div id="toprow">
+		<div class="center">
+			<div class="textbox">
+			
+	<div id="content">
+		<ui:insert name="content">
+		
+		</ui:insert>
+	</div>
+	</div>
+		</div>
+	</div>
+	<!--Toprow END-->
+
+
+	<!--Footer Begin-->
+	<div id="footer">
+		<ui:insert name="footer">
+			<div class="foot">
+					<span>SGCópias Copyleft 2013 - Todos os direitos reservados </span>
+			</div>
+		</ui:insert>
+	</div>
+	<!--Footer END-->
+</body>
+</html>

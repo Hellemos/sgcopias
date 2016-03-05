@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+	<managed-bean>
+		<managed-bean-name>CategoriaDocumentoBEAN</managed-bean-name>
+		<managed-bean-class>br.edu.ifrn.ManagedBean.CategoriaDocumentoBEAN</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>TipoPapelBEAN</managed-bean-name>
+		<managed-bean-class>br.edu.ifrn.ManagedBean.TipoPapelBEAN</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>DepartamentoBEAN</managed-bean-name>
+		<managed-bean-class>br.edu.ifrn.ManagedBean.DepartamentoBEAN</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>CursoBEAN</managed-bean-name>
+		<managed-bean-class>br.edu.ifrn.ManagedBean.CursoBEAN</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>SolicitacaoBEAN</managed-bean-name>
+		<managed-bean-class>br.edu.ifrn.ManagedBean.SolicitacaoBEAN</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+</faces-config>

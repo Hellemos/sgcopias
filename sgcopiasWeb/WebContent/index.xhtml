@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template/layout.xhtml">
+	<ui:define name="content">
+	<h:form enctype="multipart/form-data" >
+		<p:panelGrid columns="2" rows="7">
+		<f:facet name="header">
+		</f:facet>
+		<h:outputLabel for="name" value="Título do documento:" style="font-weight:bold"/>  
+  		<p:inputText id="name" value="#{solicitacaoBean.titulo}" /> 
+			
+			<p>Categoria Documento:</p>
+			<h:selectOneMenu value="#{solicitacaoBean.solicitacao.documento.categoriaDocumento}" converter="simpleEntityConverter">
+				<f:selectItem itemLabel="" itemValue=""
+					noSelectionOption="true" />
+				<f:selectItems value="#{categoriaDocumentoBEAN.listarCategoria}"
+					var="categoria" itemLabel="#{categoria.nome}"
+					itemValue="#{categoria}" />
+			</h:selectOneMenu>
+			
+			<p>Tamanho da folha:</p>
+			<h:selectOneMenu value="#{solicitacaoBean.solicitacao.documento.tipoPapel}" converter="simpleEntityConverter">
+				<f:selectItem itemLabel="" itemValue=""
+					noSelectionOption="true" />
+				<f:selectItems value="#{tipoPapelBEAN.listarTipoPapel}"
+					var="tip" itemLabel="#{tip.nome}"
+					itemValue="#{tip}" />
+			</h:selectOneMenu>
+			
+			<p>Diretoria:</p>
+			<h:selectOneMenu value="#{departamentoBEAN.departamento}">
+				<f:selectItem itemLabel="" itemValue=""
+					noSelectionOption="true" />
+				<f:selectItems value="#{departamentoBEAN.listaDepartamento}"
+					var="dep" itemLabel="#{dep.nome}"
+					itemValue="#{dep}" />
+					
+			</h:selectOneMenu>
+			
+			<p>Curso:</p>
+			<h:selectOneMenu value="#{cursoBEAN.curso}">
+				<f:selectItem itemLabel="" itemValue=""
+					noSelectionOption="true" />
+				<f:selectItems value="#{cursoBEAN.listarCurso}"
+					var="curso" itemLabel="#{curso.nome}"
+					itemValue="#{curso}" />
+					<!-- <p:ajax event="" listener>  -->
+			</h:selectOneMenu>
+			
+			<p:fileUpload value="#{solicitacaoBEAN.arquivo}" mode="simple"/>  
+			
+		<h:commandButton action="#{solicitacaoBEAN.salvar}" value="Salvar" />
+			
+			<!-- <p:dataTable value="#{categoriaDocumentoBEAN.listarCategoria}"
+				var="tp" emptyMessage="Nenhum Tipo de Trabalho cadastrado"
+				paginator="true" rows="10"
+				paginatorTemplate="{PageLinks} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+				<p:column headerText="Descricao">
+					<h:outputText value="#{tp.nome}" />
+				</p:column>
+			</p:dataTable> -->
+			
+		<f:facet name="footer">
+			
+		</f:facet>
+		</p:panelGrid>
+	</h:form>
+	</ui:define>
+</ui:composition>
+</html>
